@@ -1,4 +1,4 @@
-package com.example.atividadegestaodeprodutos;
+package com.example.gestaodeprodutos.model;
 
 public class Produto {
     private String nome;

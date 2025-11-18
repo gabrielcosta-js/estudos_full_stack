@@ -1,4 +1,4 @@
-package com.example.atividadegestaodeprodutos;
+package com.example.gestaodeprodutos;
 
 import org.junit.Test;
 
