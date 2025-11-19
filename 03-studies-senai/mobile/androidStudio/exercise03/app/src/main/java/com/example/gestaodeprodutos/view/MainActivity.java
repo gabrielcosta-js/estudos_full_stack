@@ -1,0 +1,65 @@
+package com.example.gestaodeprodutos.view;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import com.example.gestaodeprodutos.R;
+import com.example.gestaodeprodutos.model.Produto;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
+
+    private ArrayList<Produto> produtos;
+    private ArrayAdapter<Produto> adapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        ListView listaProdutos = findViewById(R.id.listaProdutos);
+        FloatingActionButton btnAdd = findViewById(R.id.btnAdd);
+
+        produtos = new ArrayList<>();
+
+        // Pega os dados da lista e converte para forma visual
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, produtos);
+        listaProdutos.setAdapter(adapter);
+
+        btnAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CadastroProdutoActivity.class);
+            startActivityForResult(intent, 1);
+
+        });
+    }
+
+    protected void OnActivityResult(int requestcode, int resultdCode, @Nullable Intent data){
+        super.onActivityResult(requestcode, resultdCode, data);
+
+        if (requestcode == 1 && resultdCode == RESULT_OK && data != null){
+            String nome = data.getStringExtra("nome");
+            Double preco = data.getDoubleExtra("preco", 0);
+
+            produtos.add(new Produto(nome, preco));
+            adapter.notifyDataSetChanged();
+
+        }
+    }
+}
