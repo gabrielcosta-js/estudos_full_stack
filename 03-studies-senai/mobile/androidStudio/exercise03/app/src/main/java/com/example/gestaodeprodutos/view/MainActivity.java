@@ -1,65 +1,61 @@
 package com.example.gestaodeprodutos.view;
 
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.util.Log;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.gestaodeprodutos.R;
-import com.example.gestaodeprodutos.model.Produto;
+import com.example.gestaodeprodutos.adapter.ProdutoAdapter;
+import com.example.gestaodeprodutos.viewmodel.ProdutoViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<Produto> produtos;
-    private ArrayAdapter<Produto> adapter;
+
+    private ProdutoViewModel viewModel;
+    private ProdutoAdapter adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+
+        RecyclerView recycler = findViewById(R.id.recyclerProdutos);
+        recycler.setLayoutManager(new LinearLayoutManager(this));
+
+
+        adapter = new ProdutoAdapter(new ArrayList<>());
+        recycler.setAdapter(adapter);
+
+
+        FloatingActionButton fab = findViewById(R.id.fabAddProduto);
+        fab.setOnClickListener(v ->
+                startActivity(new Intent(this, CadastroProdutoActivity.class))
+        );
+
+
+        // VIEWMODEL
+        viewModel = new ViewModelProvider(this).get(ProdutoViewModel.class);
+        viewModel.getProdutos().observe(this, produtos -> {
+            Log.d("MAIN_DEBUG", "Lista recebida: " + produtos);
+            if (produtos != null) adapter.atualizarLista(produtos);
         });
 
-        ListView listaProdutos = findViewById(R.id.listaProdutos);
-        FloatingActionButton btnAdd = findViewById(R.id.btnAdd);
 
-        produtos = new ArrayList<>();
-
-        // Pega os dados da lista e converte para forma visual
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, produtos);
-        listaProdutos.setAdapter(adapter);
-
-        btnAdd.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, CadastroProdutoActivity.class);
-            startActivityForResult(intent, 1);
-
-        });
-    }
-
-    protected void OnActivityResult(int requestcode, int resultdCode, @Nullable Intent data){
-        super.onActivityResult(requestcode, resultdCode, data);
-
-        if (requestcode == 1 && resultdCode == RESULT_OK && data != null){
-            String nome = data.getStringExtra("nome");
-            Double preco = data.getDoubleExtra("preco", 0);
-
-            produtos.add(new Produto(nome, preco));
-            adapter.notifyDataSetChanged();
-
-        }
+        viewModel.carregarProdutos();
     }
 }
