@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gymcam.controller.MainController"
+            prefWidth="1024"
+            prefHeight="768">
+
+    <!-- ================= TOP BAR ================= -->
+    <top>
+        <ToolBar>
+
+            <Button text="Câm 1" onAction="#focusCamera1"/>
+            <Button text="Câm 2" onAction="#focusCamera2"/>
+            <Button text="Câm 3" onAction="#focusCamera3"/>
+            <Button text="Câm 4" onAction="#focusCamera4"/>
+            <Button text="Câm 5" onAction="#focusCamera5"/>
+            <Button text="Câm 6" onAction="#focusCamera6"/>
+
+            <!-- Espaçador para empurrar o status para a direita -->
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="statusLabel"
+                   text="Sistema Iniciado"
+                   style="-fx-text-fill: #333; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <!-- ================= CENTER ================= -->
+    <center>
+        <StackPane fx:id="rootStack" style="-fx-background-color: black;">
+
+            <!-- ===== GRID (MOSAICO) ===== -->
+            <GridPane fx:id="gridLayout"
+                      hgap="5"
+                      vgap="5"
+                      visible="true"
+                      maxWidth="Infinity"
+                      maxHeight="Infinity">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="33.33"/>
+                    <ColumnConstraints percentWidth="33.33"/>
+                    <ColumnConstraints percentWidth="33.33"/>
+                </columnConstraints>
+
+                <rowConstraints>
+                    <!-- primeira linha maior (camera principal) -->
+                    <RowConstraints percentHeight="60"/>
+                    <RowConstraints percentHeight="40"/>
+                </rowConstraints>
+
+                <!-- CÂMERA PRINCIPAL (linha 0, span 3) -->
+                <StackPane GridPane.columnSpan="3"
+                           GridPane.rowIndex="0"
+                           maxWidth="Infinity"
+                           maxHeight="Infinity"
+                           style="-fx-background-color: #1a1a1a;">
+                    <ImageView fx:id="cameraMain"
+                               preserveRatio="false"
+                               smooth="true"
+                               fitWidth="9999"
+                               fitHeight="9999"
+                               pickOnBounds="true"/>
+                </StackPane>
+
+                <!-- CÂMERAS SECUNDÁRIAS (linha 1, col 0..2) -->
+                <StackPane GridPane.rowIndex="1"
+                           GridPane.columnIndex="0"
+                           maxWidth="Infinity"
+                           maxHeight="Infinity"
+                           style="-fx-background-color: #222;">
+                    <ImageView fx:id="camera2"
+                               preserveRatio="false"
+                               smooth="true"
+                               fitWidth="9999"
+                               fitHeight="9999"
+                               pickOnBounds="true"/>
+                </StackPane>
+
+                <StackPane GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"
+                           maxWidth="Infinity"
+                           maxHeight="Infinity"
+                           style="-fx-background-color: #222;">
+                    <ImageView fx:id="camera3"
+                               preserveRatio="false"
+                               smooth="true"
+                               fitWidth="9999"
+                               fitHeight="9999"
+                               pickOnBounds="true"/>
+                </StackPane>
+
+                <StackPane GridPane.rowIndex="1"
+                           GridPane.columnIndex="2"
+                           maxWidth="Infinity"
+                           maxHeight="Infinity"
+                           style="-fx-background-color: #222;">
+                    <ImageView fx:id="camera4"
+                               preserveRatio="false"
+                               smooth="true"
+                               fitWidth="9999"
+                               fitHeight="9999"
+                               pickOnBounds="true"/>
+                </StackPane>
+            </GridPane>
+
+            <!-- ===== SOBREPOSIÇÃO: Label "Gravando ao vivo" no canto superior direito ===== -->
+            <AnchorPane pickOnBounds="false" mouseTransparent="true">
+                <Label fx:id="recordingLabel"
+                       text="● Gravando ao vivo"
+                       style="-fx-text-fill: white; -fx-font-weight: bold; -fx-background-color: rgba(200,0,0,0.75); -fx-padding: 6 10 6 10; -fx-background-radius: 6;"
+                       AnchorPane.topAnchor="8.0"
+                       AnchorPane.rightAnchor="8.0"/>
+            </AnchorPane>
+
+            <!-- ===== TELA CHEIA (inicialmente escondida) ===== -->
+            <BorderPane fx:id="fullScreenLayout"
+                        visible="false"
+                        style="-fx-background-color: black;"
+                        maxWidth="Infinity"
+                        maxHeight="Infinity">
+
+                <center>
+                    <ImageView fx:id="fullScreenView"
+                               preserveRatio="true"
+                               smooth="true"
+                               fitWidth="9999"
+                               fitHeight="9999"
+                               pickOnBounds="true"/>
+                </center>
+
+                <bottom>
+                    <HBox alignment="CENTER"
+                          style="-fx-padding: 10; -fx-background-color: #333;">
+                        <Button text="Voltar ao Mosaico"
+                                onAction="#returnToGrid"
+                                style="-fx-font-size: 14px; -fx-padding: 10 20; -fx-cursor: hand;"/>
+                    </HBox>
+                </bottom>
+            </BorderPane>
+
+        </StackPane>
+    </center>
+</BorderPane>
