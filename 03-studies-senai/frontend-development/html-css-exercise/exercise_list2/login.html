@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             height: 100vh; /* Ocupa toda a altura da tela */
+        }
+
+        main {
+            background-color: ghostwhite;
+            border: 2px solid black;
+            margin: auto;
+            width: 400px;
+            box-shadow: 1px 2px black;
+            padding: 10px;
+
+        }
+         span {
+            color: aqua;
+            display: flex;
+            justify-content: center;
+            height: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Faça Login na sua conta</h1> <br>
+        <form action="login.html" method="get">
+            <label for="iemail">E-mail</label>
+            <input type="email" name="" id="iemail"> <br><br>
+
+            <label for="isenha">Senha</label>
+            <input type="password" name="" id="isenha"> <br><br>
+
+            <input type="submit" value="Logar">
+        </form>
+
+        <span><a href="cadastro.html">Não tem conta? Cadastre-se</a></span>
+
+    </main>
+
+</body>
+
+</html>
