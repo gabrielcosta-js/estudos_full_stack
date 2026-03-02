@@ -1,0 +1,123 @@
+<!Doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" meta content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação do Cliente</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reset.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html">
+            <img src="src/img/favicon.png" alt="Logo da Empresa">
+        </a>
+        <h1 id="nomeEmpresa">DataMindSolutions</h1>
+    </header>
+
+    <main>
+        <h1>Pesquisa de Satisfação</h1>
+        <p>Ajude-nos a melhorar nossos serviços respondendo este formulário</p>
+        <form action="index.html" method="get">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="Inome" class="tituloForm">Nome Completo</label>
+                <input type="text" name="" id="Inome">
+
+                <label for="Iemail" class="tituloForm">E-mail</label>
+                <input type="email" name="" id="Iemail">
+
+                <label for="Iidade" class="tituloForm">Idade</label>
+                <input type="number" name="" id="" class="ultimoInput">
+            </fieldset>
+
+            <fieldset>
+                <legend>Avaliação</legend>
+                <label for="" class="tituloForm">Como você avalia nosso atendimento?</label>
+
+                <label for="Iexcelente">Excelente</label><input type="radio" name="Iavaliacao" id="Iexcelente">
+
+                <label for="Ibom">Bom</label><input type="radio" name="Iavaliacao" id="Ibom">
+
+                <label for="Iregular">Regular</label><input type="radio" name="Iavaliacao" id="Iregular">
+
+                <label for="Iruim">Ruim</label><input type="radio" name="Iavaliacao" id="Iruim" class="">
+
+                <label for="" class="tituloForm">Quais serviços você utilizou?</label>
+
+                <label for="Isite">Site</label>
+                <input type="checkbox" name="Iservico" id="Isite">
+
+                <label for="Iapp">App</label>
+                <input type="checkbox" name="Iservico" id="Iapp">
+
+                <label for="Iatendimento">Atendimento</label>
+                <input type="checkbox" name="Iservico" id="Iatendimento">
+
+                <label for="Ientrega">Entrega</label>
+                <input type="checkbox" name="Iservico" id="Ientrega" class="ultimoInput">
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Gerais</legend>
+                <label for="" class="tituloForm">Estado:</label>
+                <select name="estado" id="estado" class="ultimoInput">
+                    <option value="">Selecione seu estado</option>
+
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentários</legend>
+                <label for="" class="tituloForm">Deixe sua Sugestão</label>
+                <textarea name="" id=""></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extra</legend>
+                <label for="Inovidade" class="tituloForm">Deseja receber Novidades?</label>
+                <input type="checkbox" name="" id="Inovidade" class="ultimoInput" checked>
+            </fieldset>
+            <div id="formEnvio">
+                <input type="submit" value="Enviar Pesquisa">
+                <input type="reset" value="Limpar Formulário">
+            </div>
+
+
+        </form>
+    </main>
+</body>
+
+</html>

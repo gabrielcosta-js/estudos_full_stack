@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,44 @@
     <style>
         iframe {
             width: 400px;
-            height: 400px; /*Css é soberano, todo aplicação que coloca aqui afeta, idependente do que estiver no html */
+            height: 400px;
+            /*Css é soberano, todo aplicação que coloca aqui afeta, idependente do que estiver no html */
         }
+
         .erro {
             color: red;
         }
     </style>
 </head>
+
 <body>
     <h1>Testando o uso de um iframe</h1>
-    <p>Acessando o site do 
-        
-        <iframe src="https://www.cursoemvideo.com" frameborder="0">
-            <a href="https://www.cursoemvideo.com" target="_blank" scolling="yes">Curso em vídeo</a> <!-- Caso não seja compatível com o iframe irá aparecer está mensagem--> <!--Scolling é para permitir a rolagem do sitem frameborder é a borda do freme-->
-        </iframe>
-        para aprender a programar</p>
-        <p>O site do 
-            <iframe src="https://www.google.com.br" frameborder="0"></iframe>
-            tambem é muito legal, pena que não funciona o iframe, tem sites que por segurança não permite!
-        </p>
-        <p>O repositório do mestre Guanabara
+    <p>Acessando o site do
 
-            <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500" width="500">
-                <a href="ttps//gustavoguanabara.github.io">github</a>
-            </iframe>
-           
-        </p>
-        <h1>Meu próprio IFrame</h1> <!--Isso faz parte do capitulo 2-->
-        <iframe src="https://gabriel-costa-de-jesus.github.io/projetos-front_end/project-center/index.html" frameborder="0">
-            <p class="erro">Infelizmente seu navegador não é compatível!</p>
+        <iframe src="https://www.cursoemvideo.com" frameborder="0">
+            <a href="https://www.cursoemvideo.com" target="_blank" scolling="yes">Curso em vídeo</a>
+            <!-- Caso não seja compatível com o iframe irá aparecer está mensagem-->
+            <!--Scolling é para permitir a rolagem do sitem frameborder é a borda do freme-->
         </iframe>
+        para aprender a programar
+    </p>
+    <p>O site do
+        <iframe src="https://www.google.com.br" frameborder="0"></iframe>
+        tambem é muito legal, pena que não funciona o iframe, tem sites que por segurança não permite!
+    </p>
+    <p>O repositório do mestre Guanabara
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500" width="500">
+            <a href="ttps//gustavoguanabara.github.io">github</a>
+        </iframe>
+
+    </p>
+    <h1>Meu próprio IFrame</h1> <!--Isso faz parte do capitulo 2-->
+    <iframe src="https://gabriel-costa-de-jesus.github.io/projetos-front_end/project-center/index.html" frameborder="0">
+        <p class="erro">Infelizmente seu navegador não é compatível!</p>
+    </iframe>
 </body>
+
 </html>
 
 <!-- Objetivo do exercício - Utilizando os iframes -->

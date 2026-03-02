@@ -1,0 +1,87 @@
+:root {
+    --corPrimaria: #1E3A8A;
+    --corSecundaria: #3B82F6;
+    --corDestaque: #FACC15;
+    --corFundo: #F3F4F6;
+    --corTexto: #1F2933;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    background-color: var(--corPrimaria);
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.cabecalho img {
+    width: 100px;
+    height: 100px;
+}
+
+.cabecalho h1 {
+    color: white;
+}
+body {
+    background-color: var(--corFundo);
+}
+
+main {
+    margin: auto;
+    width: 900px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
+    background-color: white;
+}
+
+main h1 {
+    color: var(--corPrimaria);
+}
+
+fieldset {
+  
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--corSecundaria)
+}
+fieldset legend {
+    color: var(--corPrimaria);
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+.tituloForm{
+    font-weight: bolder;
+}
+
+main h1 +p{
+    margin-top: 15px;
+} 
+
+fieldset{
+    margin-top: 15px;
+}
+form label {
+    display: block;
+    margin-top: 15px;
+}
+
+form input {
+    display: block;
+    margin-top: 5px;
+}
+.ultimoInput {
+    margin-bottom: 15px;
+}
+
+#formEnvio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#formEnvio input {
+    margin: 10px 0px;
+    width: 100%;
+}
