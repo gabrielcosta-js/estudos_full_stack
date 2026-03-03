@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --corPrimaria: rgba(0, 0, 0, 0.822);
+    --corSecundaria: #2563EB;
+    --corDestaque: #EC4899;
+    --corFundo: #F3F4F6;
+    --CorTexto: #111827;
+}
+/* COnfiguração do Header */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    background-color: var(--corPrimaria);
+    padding: 10px;
+}
+header img {
+    width: 100px;
+    height: 100px;
+}
+header img:hover {
+    width: 105px;
+    height: 105px;
+    transition-duration: 1s;
+    border: 1px solid rgba(0, 0, 0, 0.034);
+}
+header h1:hover {
+    font-size: 41px;
+    transition-duration: 1s;
+    border: 1px solid rgba(0, 0, 0, 0.034);
+}
+header li {
+    display: inline;
+    list-style: none; 
+    margin-right: 15px; 
+}
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+    padding: 10px;
+}
+header ul a:hover{
+    font-size: 25px;
+    transition-duration: 1s;
+    color: red;
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.589);
+}
+header a:visited{
+    color: white;
+}
+header h1 {
+    color: white;
+}
+
+
+/* Configuração do Body e main */
+body {
+    background-color: var(--corFundo);
+}
+main {
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 3px 3px 10px 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.527);
+}
+main section#sectionPrincipal h1, section#sectionDestaque h1{
+    margin: 30px 0px 0px 15px;
+}
+main section#sectionPrincipal p, section#sectionDestaque p {
+    margin: 15px 0px 0px 15px;
+}
+
+main section#sectionPrincipal button {
+    margin: 15px 0px 0px 15px;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+main section#sectionPrincipal button:hover{
+    cursor: pointer;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.192);
+    transition-duration: 1s;
+    border: 1px solid rgba(0, 0, 0, 0.589);
+
+} 
+
+/* Configuração do CSS Sobre nós Página 2 */
+
+main section#sobreNossectionPrincipal h1, section#sobreNossectionDestaque h1{
+    margin: 30px 0px 0px 15px;
+}
+main section#sobreNossectionPrincipal p, section#SobreNossectionDestaque p {
+    margin: 15px 0px 0px 15px;
+}
+main section#sobreNossectionPrincipal ul {
+    margin: 15px 0px 0px 30px;
+
+}
+
+/* Configuração do Css Inscrição Página 3 */
+
+main#MainIncricao{
+    width: 60%;
+}
+section#inscricaosectionPrincipal h1{
+    margin: 30px 0px 40px 15px;
+}
+
+section#inscricaosectionPrincipal fieldset {
+    margin: 0px 0px 25px 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--corSecundaria);
+    border-radius: 10px;
+    padding: 20px;
+}
+.inputText {
+    height: 30px;
+    font-size: 20px;
+}
+
+section#inscricaosectionPrincipal fieldset#fieldsetPerfil div{
+   display: inline;
+}
+section#inscricaosectionPrincipal fieldset#fieldsetPerfil div input {
+    margin-right: 5px;
+}
+section#inscricaosectionPrincipal fieldset#fieldsetPerfil div label {
+    margin-right: 15px;
+}
+
+section#inscricaosectionPrincipal fieldset#fieldsetExtra div {
+    display: inline;
+}
+
+section#inscricaosectionPrincipal fieldset#fieldsetExtra div input {
+    margin-right: 5px;
+}
+
+section#inscricaosectionPrincipal legend {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+section#inscricaosectionPrincipal input{
+    margin-bottom: 15px;
+}
+
+section#inscricaosectionPrincipal fieldset#fieldsetPerfil label {
+    margin-top: 10px;
+}
+
+.tituloForm{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.subtituloForm{
+    font-size: 20px;
+}
+
+div#Enviar{
+    display: flex;
+    flex-direction: column;
+}
+div#Enviar input {
+    padding: 15px;
+     border: 1px solid var(--corSecundaria);
+     border-radius: 10px;
+     font-size: 20px;
+     font-weight: bolder;
+     color: white;
+     background-color: #1658e7b6;
+    
+}
+div#Enviar input:hover {
+    cursor: pointer;
+    background-color: #1658e7;
+
+}

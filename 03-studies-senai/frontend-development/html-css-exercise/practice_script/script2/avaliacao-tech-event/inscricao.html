@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tech Experience 2026 - Sobre nós</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/te-logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/te-logo.png" alt="Logo da Empresa"></a>
+        <a href="index.html">
+            <h1>Tech Experience 2026</h1>
+        </a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="inscricao.html">Inscrição</a></li>
+        </ul>
+    </header>
+    <main id="MainIncricao">
+        <section id="inscricaosectionPrincipal">
+            <h1>Preencha o formulário abaixo para participar de Nosso evento!</h1>
+
+            <form action="index.html." method="get">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="Inome" class="subtituloForm">Nome Completo</label>
+                    <input type="text" name="" id="Inome" class="inputText">
+
+                    <label for="Iemail" class="subtituloForm">Email</label>
+                    <input type="email" name="" id="Iemail" class="inputText">
+
+                    <label for="Itelefone" class="subtituloForm">Telefone</label>
+                    <input type="number" name="" id="Itelefone" class="inputText">
+
+                    <label for="Idata" class="subtituloForm">Data de Nascimento</label>
+                    <input type="date" name="" id="Idata" class="inputText">
+                </fieldset>
+
+                <fieldset id="fieldsetPerfil">
+                    <legend>Perfil</legend>
+                    <label for="" class="tituloForm">Você É:</label>
+                    <div>
+                        
+                        <input type="radio" name="Iperfil" id="Iestudante">
+                        <label for="Iestudante" class="subtituloForm">Estudante</label>
+
+                        <input type="radio" name="Iperfil" id="Iprofessor">
+                        <label for="Iprofessor" class="subtituloForm">Professor</label>
+
+                        <input type="radio" name="Iperfil" id="Iprofissinonal">
+                        <label for="Iprofissional" class="subtituloForm">Profissional da Área</label>
+                    </div>
+
+
+                    <label for="" class="tituloForm">Área de interrese:</label>
+
+                    <div>
+                        <input type="checkbox" name="Iarea" id="Ifront">
+                        <label for="Ifront" class="subtituloForm">FrontEnd</label>
+
+                        <input type="checkbox" name="Iarea" id="Iback">
+                         <label for="Iback" class="subtituloForm">BackEnd</label>
+
+                        <input type="checkbox" name="Iarea" id="Imobile">
+                        <label for="Imobile" class="subtituloForm">Mobile</label>
+
+                        <input type="checkbox" name="Iarea" id="Idados">
+                        <label for="Idados" class="subtituloForm">Dados</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Localização</legend>
+
+                    <label for="Icidade" class="subtituloForm">Cidade</label>
+                    <input type="text" name="" id="Icidade" class="inputText">
+
+                    <label for="Iestado" class="subtituloForm">Estado:</label>
+
+                    <select name="estado" id="Iestado">
+                        <option value="">Selecione seu estado</option>
+
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Observações</legend>
+                    <label for="Iobservacao" class="subtituloForm">Deixe sua Observação aqui</label>
+
+                    <textarea name="" id="Iobservacao" ></textarea>
+                </fieldset>
+
+                <fieldset id="fieldsetExtra">
+                    <legend>Extra</legend>
+                    <div>
+                        <input type="checkbox" name="" id="Inovidade" checked>
+                        <label for="Inovidade" class="subtituloForm">Desejo Receber Novidades por e-mail!</label>
+                    </div>
+
+                </fieldset>
+                
+                <div id="Enviar">
+                    <input type="submit" value="Finalizar Inscrição">
+                <input type="reset" value="Limpar Formulário">
+
+                </div>
+                
+
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>
