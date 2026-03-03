@@ -1,0 +1,21 @@
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    main{
+        width: 95%;
+    }
+ }
+
+/* Celulares médios */
+@media (max-width: 768px) { 
+    main{
+        width: 95%;
+        background-color: aqua;
+    }
+    body{
+        width: 100%;
+        background-color: brown;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) { }
