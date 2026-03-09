@@ -20,12 +20,12 @@ header {
     padding: 10px;
 }
 header img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: auto;
 }
 header img:hover {
-    width: 105px;
-    height: 105px;
+    width: 32%;
+    height: auto;
     transition-duration: 1s;
     border: 1px solid rgba(0, 0, 0, 0.034);
 }
@@ -38,14 +38,15 @@ header li {
     display: inline;
     list-style: none; 
     margin-right: 15px; 
+    font-size: 20px;
 }
-header a {
+header a.headerLinks{
     text-decoration: none;
     color: white;
     font-weight: bolder;
-    font-size: 1.2em;
     padding: 10px;
 }
+
 header ul a:hover{
     font-size: 25px;
     transition-duration: 1s;
