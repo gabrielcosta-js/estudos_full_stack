@@ -24,15 +24,13 @@ header img {
     height: auto;
 }
 header img:hover {
-    width: 32%;
+    transform: scale(1.2);
     height: auto;
     transition-duration: 1s;
-    border: 1px solid rgba(0, 0, 0, 0.034);
 }
 header h1:hover {
-    font-size: 41px;
+    transform: scale(1.1);
     transition-duration: 1s;
-    border: 1px solid rgba(0, 0, 0, 0.034);
 }
 header li {
     display: inline;
@@ -47,13 +45,12 @@ header a.headerLinks{
     padding: 10px;
 }
 
-header ul a:hover{
-    font-size: 25px;
+header ul a.headerLinks:hover{
+    transform: scale(1.1);
     transition-duration: 1s;
     color: red;
     background-color: rgba(255, 255, 255, 0.103);
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.589);
 }
 header a:visited{
     color: white;

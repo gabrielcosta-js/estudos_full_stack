@@ -1,24 +1,69 @@
 /* Celulares pequenos */
 @media (max-width: 480px) {
-    main{
+    main {
         width: 80%;
     }
- }
+}
 
 /* Celulares médios */
-@media (max-width: 768px) { 
-    main#MainIncricao{
-       width: 80%;
-       background-color: aqua;
+@media (max-width: 768px) {
+    main#MainIncricao {
+        width: 80%;
     }
+
     header {
         gap: 10px;
     }
-    header h1{
+
+    header h1 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    header ul li {
+        margin-right: 0;
+    }
+
+    header ul a.headerLinks {
+        font-size: 12px;
+        margin-left: 5px;
+        padding: 0;
+    }
+
+    main#MainIncricao h1{
+        font-size: 26px;
+    }
+
+    section#inscricaosectionPrincipal fieldset {
+        margin: 0px 0px 15px 0px;
+    }
+
+    section#inscricaosectionPrincipal legend {
+        font-size: 20px;
+    }
+
+    section#inscricaosectionPrincipal fieldset#fieldsetPerfil div input {
+        margin-right: 1px;
+    }
+
+    section#inscricaosectionPrincipal fieldset#fieldsetPerfil div label {
+        margin-right: 5px;
+    }
+
+    .tituloForm {
+        font-size: 20px;
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    .subtituloForm {
         font-size: 10px;
-        color: brown;
     }
 }
 
 /* Tablets */
-@media (max-width: 1024px) { }
+@media (max-width: 1024px) {}
