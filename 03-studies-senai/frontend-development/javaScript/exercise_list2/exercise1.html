@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+   
+</head>
+<body>
+    <h1 id="titulo">Clique no Botão para alterar o título</h1>
+    <button id="btn">Alterar Título</button>
+</body>
+<script>
+    const h1_titulo = document.getElementById("titulo");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener('click', () => {
+        h1_titulo.textContent = "Texto Alterado com Sucesso!"
+    });
+</script>
+</html>

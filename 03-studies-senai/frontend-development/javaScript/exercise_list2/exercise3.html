@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+   
+</head>
+<body>
+    <h1 id="titulo">Clique no Botão para Mostrar o Texto Secreto</h1>
+    <button id="btn">Mostrar</button>
+    <p id="paragrafo">Você Clicou no botão!</p>
+</body>
+<script>
+    const paragrafo = document.getElementById("paragrafo");
+    const btn = document.getElementById("btn");
+
+    paragrafo.style.display = 'none';
+
+    btn.addEventListener('click', () => {
+        paragrafo.style.display = 'block';
+    });
+
+    
+</script>
+</html>

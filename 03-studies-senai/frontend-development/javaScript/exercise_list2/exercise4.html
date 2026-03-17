@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+   
+</head>
+<body>
+    <h1 id="titulo">Clique no Botão Abaixo</h1>
+    <button id="btn">Clicar</button>
+    <p id="paragrafo"></p>
+</body>
+<script>
+    const paragrafo = document.getElementById("paragrafo");
+    const btn = document.getElementById("btn");
+    let count = 0;
+
+    btn.addEventListener('click', () => {
+        paragrafo.textContent = count;
+        count++;
+
+    });
+
+    
+</script>
+</html>

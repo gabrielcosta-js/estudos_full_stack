@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <style>
+        .azul {
+            color: blue;
+        }
+        .vermelho {
+            color: red;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Crie uma senha abaixo: </h1>
+    <input type="password" name="" id="">
+    <button id="btn">Enviar</button>
+</body>
+<script>
+    const titulo = document.getElementById("titulo");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener('click', () => {
+        titulo.classList.remove("azul");
+        titulo.classList.add("vermelho");
+    });
+
+    
+</script>
+</html>
