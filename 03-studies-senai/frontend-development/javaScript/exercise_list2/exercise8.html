@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 8</title>
+    <style>
+  
+    </style>
+  </head>
+  <body>
+    <h1>Adicione Item na lista abaixo</h1>
+    <input type="text" id="inputLista" />
+    <ul></ul>
+    <button id="btn">Adicionar</button>
+    
+  </body>
+  <script>
+    const btn = document.getElementById("btn");
+    const ul = document.querySelector("ul");
+    const inputLista = document.querySelector("#inputLista");
+
+    function adcLista() {
+  if (inputLista.value.trim()) {
+    const li = document.createElement("li");
+    li.textContent = inputLista.value;
+
+    // cria botão
+    const btnRemover = document.createElement("button");
+    btnRemover.textContent = "Remover";
+    btnRemover.style.marginLeft = "10px";
+
+    // evento de remover
+    btnRemover.addEventListener("click", () => {
+      li.remove();
+    });
+
+    // adiciona botão dentro do li e dps o li na ul
+    li.appendChild(btnRemover);
+    ul.appendChild(li);
+
+    // Limpar o input e focar nele pra escrever novo texto
+    inputLista.value = "";
+    inputLista.focus();
+  } else {
+    alert("Escreva algo primeiro!");
+  }
+}
+    btn.addEventListener("click", () => {
+      adcLista();
+    });
+    
+  
+  </script>
+</html>

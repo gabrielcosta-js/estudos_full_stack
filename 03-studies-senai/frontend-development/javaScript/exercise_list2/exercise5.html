@@ -6,28 +6,39 @@
     <title>Exercício 5</title>
     <style>
         .escuro {
-            background-color: rgba(0, 0, 0, 0.452);
+            background-color: rgba(0, 0, 0, 0.877);
         }
         .white {
-            background-color: grey;
+            background-color: white;
         }
     </style>
    
 </head>
-<body id="escuro">
-    <h1>Clique no Botão Abaixo para mudar a cor de fundoRemovendo a classe e adicionando outra</h1>
+<body id="tema">
+    <h1>Clique no Botão Abaixo para mudar a cor de fundo Removendo a classe e adicionando outra</h1>
     <button id="btn">Clicar</button>
 </body>
 <script>
     const btn = document.getElementById("btn");
+    const tema = document.getElementById("tema");
+    const h1 = document.querySelector("h1")
+    let btnState = 0;
 
     btn.addEventListener('click', () => {
-        if (titulo.classList == azul) {
 
-            
+        if (btnState%2 == 0) {
+            tema.classList.remove("white");
+            tema.classList.add("escuro");
+            h1.style.color = "white"
+
         }
-        titulo.classList.remove("azul");
-        titulo.classList.add("vermelho");
+        else {
+            tema.classList.remove("escuro");
+            tema.classList.add("white");
+            h1.style.color = "black"
+        }
+        btnState++;
+        console.log(btnState);
     });
 
     

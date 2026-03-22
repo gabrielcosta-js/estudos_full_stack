@@ -1,33 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 5</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 6</title>
     <style>
-        .azul {
-            color: blue;
-        }
-        .vermelho {
-            color: red;
-        }
+      .erro {
+        color: red;
+        font-size: 14px;
+      }
     </style>
-   
-</head>
-<body>
-    <h1>Crie uma senha abaixo: </h1>
-    <input type="password" name="" id="">
-    <button id="btn">Enviar</button>
-</body>
-<script>
-    const titulo = document.getElementById("titulo");
-    const btn = document.getElementById("btn");
+  </head>
+  <body>
+    <h1>Crie uma senha abaixo:</h1>
+    <form action="exercise6.html" method="post">
+      <input type="password" name="" id="isenha" />
+      <span id="msg"> </span><br />
+      <br />
+      <input type="submit" value="Enviar" id="btn" />
+    </form>
+  </body>
+  <script>
+    const inputSenha = document.querySelector("#isenha");
+    const form = document.querySelector("form");
+    const msg = document.querySelector("#msg");
 
-    btn.addEventListener('click', () => {
-        titulo.classList.remove("azul");
-        titulo.classList.add("vermelho");
+    form.addEventListener("submit", (event) => {
+      if (!inputSenha.value.trim()) {
+        event.preventDefault(); // 🚫 BLOQUEIA envio
+
+        msg.textContent = "Digite algo!";
+        msg.classList.add("erro");
+      } else {
+        msg.textContent = "";
+      }
     });
-
-    
-</script>
+  </script>
 </html>

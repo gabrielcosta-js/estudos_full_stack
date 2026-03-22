@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 7</title>
+    <style>
+  
+    </style>
+  </head>
+  <body>
+    <h1>Adicione Item na lista abaixo</h1>
+    <input type="text" id="inputLista" />
+    <ul></ul>
+    <button id="btn">Adicionar</button>
+  </body>
+  <script>
+    const btn = document.getElementById("btn");
+    const ul = document.querySelector("ul");
+    const inputLista = document.querySelector("#inputLista");
+
+    function adcLista() {
+      if (inputLista.value.trim()) {
+        const li = document.createElement("li"); // cria <li> serve pra criar elementos do html
+        li.textContent = inputLista.value; // adiciona texto
+        ul.appendChild(li); // coloca dentro da <ul>
+      } else {
+        alert("Escreva algo primeiro!");
+      }
+    }
+
+    btn.addEventListener("click", () => {
+      adcLista();
+    });
+  </script>
+</html>
