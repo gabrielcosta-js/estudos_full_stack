@@ -48,7 +48,8 @@
 
         // Criação do Evento concluído
         btnConcluido.addEventListener("click", () => {
-          li.classList.add("concluido");
+         // li.classList.add("concluido"); Modifiquei para utilizar o Toggle ao invés disso, q tbm funciona, poupou linha de código pq não preciso programar pra quando ele clicar de novo remover a marcação, útil
+          li.classList.toggle("concluido");
         });
 
         // adiciona botão dentro do li e na ul

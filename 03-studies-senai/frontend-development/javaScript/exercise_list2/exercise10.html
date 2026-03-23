@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 10</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Veja a lista abaixe e troque suas cores</h1>
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Batata</li>
+    </ul>
+    <button id="btn">Trocar Color</button>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+    const li = document.querySelectorAll("li");
+    let count = 0;
+
+    const cores = ["blue", "green", "red", "yellow", "orange", "brown", "grey", "pink", "aqua", "purple"];
+
+    btn.addEventListener('click', () => {
+        if (count < cores.length ) {
+            for (let i = 0; i < li.length; i++) {
+                 li[i].style.color = cores[count];
+            }
+            count++;
+        }
+        else {
+            alert("Fim da quantidade de Cores");
+        }
+    })
+
+
+</script>
+
+</html>
