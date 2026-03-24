@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 17</title>
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Veja a lista abaixe e filtre</h1>
+    <input type="text" id="ifiltro">
+    <ul>
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Batata</li>
+        <li>Bola</li>
+        <li>Avião</li>
+        <li>Acerola</li>
+        <li>Balão</li>
+    </ul>
+    <button id="btn">Filtrar</button>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+
+   btn.addEventListener('click', () => {
+  const li = document.querySelectorAll("li");
+  const ifiltro = document.getElementById("ifiltro").value.trim().toLowerCase();
+
+  li.forEach((lis) => {
+    const texto = lis.textContent.trim().toLowerCase();
+
+    // 👉 Se estiver vazio, mostra tudo
+    if (ifiltro === "") {
+      lis.style.display = "list-item";
+    }
+    // 👉 Senão, aplica o filtro
+    else if (texto !== ifiltro){
+      lis.style.display = 'none';
+    }
+    else {
+      lis.style.display = 'list-item';
+    }
+  });
+});
+
+
+</script>
+
+</html>

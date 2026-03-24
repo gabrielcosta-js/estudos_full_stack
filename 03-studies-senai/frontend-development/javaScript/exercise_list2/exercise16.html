@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16</title>
+    <style>
+        .escuro {
+            background-color: rgba(0, 0, 0, 0.877);
+        }
+        .white {
+            background-color: white;
+        }
+        button {
+            border-radius: 50%;
+            background-color: transparent;
+            height: 90px;
+            width: 90px;
+            font-size: 40px;
+        }
+    </style>
+   
+</head>
+<body id="tema">
+    <h1>Clique no Botão Abaixo para mudar a cor de fundo Removendo a classe e adicionando outra</h1>
+    <button id="btn">💡</button>
+</body>
+<script>
+    const btn = document.getElementById("btn");
+    const tema = document.getElementById("tema");
+    const h1 = document.querySelector("h1")
+    let btnState = 0;
+
+    btn.addEventListener('click', () => {
+
+        if (btnState%2 == 0) {
+            tema.classList.remove("white");
+            tema.classList.add("escuro");
+            h1.style.color = "white"
+
+        }
+        else {
+            tema.classList.remove("escuro");
+            tema.classList.add("white");
+            h1.style.color = "black"
+        }
+        btnState++;
+        console.log(btnState);
+    });
+
+    
+</script>
+</html>
