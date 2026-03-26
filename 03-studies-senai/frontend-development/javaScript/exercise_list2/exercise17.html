@@ -1,56 +1,49 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercício 17</title>
     <style>
-        button {
-            cursor: pointer;
-        }
+      button {
+        cursor: pointer;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Veja a lista abaixe e filtre</h1>
-    <input type="text" id="ifiltro">
+    <input type="text" id="ifiltro" />
     <ul>
-        <li>Arroz</li>
-        <li>Feijão</li>
-        <li>Batata</li>
-        <li>Bola</li>
-        <li>Avião</li>
-        <li>Acerola</li>
-        <li>Balão</li>
+      <li>Arroz</li>
+      <li>Feijão</li>
+      <li>Batata</li>
+      <li>Bola</li>
+      <li>Avião</li>
+      <li>Acerola</li>
+      <li>Balão</li>
     </ul>
     <button id="btn">Filtrar</button>
-</body>
-<script>
+  </body>
+  <script>
     const btn = document.getElementById("btn");
+    const ifiltro = document.getElementById("ifiltro");
 
-   btn.addEventListener('click', () => {
-  const li = document.querySelectorAll("li");
-  const ifiltro = document.getElementById("ifiltro").value.trim().toLowerCase();
+    ifiltro.addEventListener("input", () => {
+      const texto = ifiltro.value.trim().toLowerCase();
+      const li = document.querySelectorAll("li");
 
-  li.forEach((lis) => {
-    const texto = lis.textContent.trim().toLowerCase();
+      li.forEach((lis) => {
+        const item_lista = lis.textContent.toLowerCase();
 
-    // 👉 Se estiver vazio, mostra tudo
-    if (ifiltro === "") {
-      lis.style.display = "list-item";
-    }
-    // 👉 Senão, aplica o filtro
-    else if (texto !== ifiltro){
-      lis.style.display = 'none';
-    }
-    else {
-      lis.style.display = 'list-item';
-    }
-  });
-});
-
-
-</script>
-
+        if (texto === "") {
+          lis.style.display = "list-item";
+        } else if (item_lista.includes(texto)) {
+          lis.style.display = "list-item";
+        } else {
+          lis.style.display = "none";
+        }
+      });
+    });
+  </script>
 </html>

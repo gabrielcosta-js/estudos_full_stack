@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 18</title>
+    <style>
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="h1">Alimente o contador abaixo</h1>
+    <button id="btnAumentar">Aumentar</button>
+    <button id="btnDiminuir">Diminuir</button>
+  </body>
+  <script>
+    const h1 = document.getElementById("h1");
+    const btnAumentar = document.getElementById("btnAumentar");
+    const btnDiminuir = document.getElementById("btnDiminuir");
+    let count = 0;
+
+    btnAumentar.addEventListener("click", () => {
+      count++;
+      atualizarContador();
+    });
+    btnDiminuir.addEventListener("click", () => {
+      count = Math.max(0, count - 1);
+      atualizarContador();
+    });
+
+    function atualizarContador() {
+      mostrarCount.textContent = `Contador Atual: ${count}`;
+    }
+    const mostrarCount = document.createElement("p");
+    mostrarCount.textContent = `Contador Atual: ${count}`;
+    h1.after(mostrarCount);
+  </script>
+</html>
