@@ -1,5 +1,5 @@
 {
-    "task": [
+    "tasks": [
         {
             "description": "Estudar JavaScript",
             "finished": true
@@ -7,6 +7,12 @@
         {
             "description": "Estudar Cálculo",
             "finished": false
+        }
+    ],
+    "users": [
+        {
+            "description": "Gabriel Costa"
+
         }
     ]
 }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "dev": "npx json-server --watch db.json --port 3000"
+     "dev": "npx json-server --watch data/db.json --port 3000"
   },
   "keywords": [],
   "author": "",
