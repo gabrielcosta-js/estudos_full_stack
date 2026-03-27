@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 12</title>
+    <style>
+      button {
+        cursor: pointer;
+      }
+      .concluido {
+        text-decoration: line-through;
+        color: rgba(0, 0, 0, 0.281);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Cadastro</h2>
+
+<input type="text" id="nome" placeholder="Nome">
+<input type="number" id="idade" placeholder="Idade">
+<button id="btnAdicionar">Adicionar</button>
+
+<ul id="lista"></ul>
+
+<script>
+    const nomeInput = document.getElementById("nome");
+    const idadeInput = document.getElementById("idade");
+    const btnAdicionar = document.getElementById("btnAdicionar");
+    const lista = document.getElementById("lista");
+
+    let pessoas = [];
+
+    btnAdicionar.addEventListener("click", () => {
+        const nome = nomeInput.value.trim();
+        const idade = idadeInput.value.trim();
+
+        if (nome === "" || idade === "") {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        const pessoa = {
+            nome: nome,
+            idade: idade
+        };
+
+        pessoas.push(pessoa);
+        atualizarLista();
+
+        nomeInput.value = "";
+        idadeInput.value = "";
+    });
+
+    function atualizarLista() {
+        lista.innerHTML = "";
+
+        pessoas.forEach((pessoa, index) => {
+            const li = document.createElement("li");
+
+            li.textContent = `${pessoa.nome} - ${pessoa.idade} anos `;
+
+            const btnRemover = document.createElement("button");
+            btnRemover.textContent = "Remover";
+
+            btnRemover.addEventListener("click", () => {
+                pessoas.splice(index, 1);
+                atualizarLista();
+            });
+
+            li.appendChild(btnRemover);
+            lista.appendChild(li);
+        });
+    }
+</script>
+</html>
