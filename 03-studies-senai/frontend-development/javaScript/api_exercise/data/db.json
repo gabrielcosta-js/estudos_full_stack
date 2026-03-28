@@ -1,18 +1,27 @@
 {
-    "tasks": [
-        {
-            "description": "Estudar JavaScript",
-            "finished": true
-        },
-        {
-            "description": "Estudar Cálculo",
-            "finished": false
-        }
-    ],
-    "users": [
-        {
-            "description": "Gabriel Costa"
-
-        }
-    ]
+  "tasks": [
+    {
+      "nomeTarefa": "Estudar JavaScript",
+      "status": true,
+      "id": "-kfmSeVhN0c"
+    },
+    {
+      "nomeTarefa": "Estudar Cálculo",
+      "status": false,
+      "id": "DZIOua_aeXQ"
+    }
+  ],
+  "users": [
+    {
+      "nomeUser": "Gabriel Costa",
+      "email": "gabrielcosta@gmail.com",
+      "id": "5GLSPePsY3I"
+    },
+    {
+      "nomeUser": "RyanBoiola",
+      "email": "ryanBoiola@gmail.com",
+      "id": "LqI7N39geOA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

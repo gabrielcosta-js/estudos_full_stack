@@ -1,5 +1,5 @@
 // Forma padrão da Api o Get
-async function getTasks() {
+export async function getTasks() {
   try {
     // Link da APi pro Get, await faz esperar a resposta
     const response = await fetch('http://localhost:3000/tasks');
@@ -9,7 +9,7 @@ async function getTasks() {
   }
 }
 
-async function getUsers() {
+export async function getUsers() {
   try {
     const response = await fetch('http://localhost:3000/users');
     return response.json();
@@ -20,11 +20,11 @@ async function getUsers() {
 }
 
 // Post //////////////////////////////////////////////////////
-async function PostTasks(postTaskData) {
+export async function postTasks(postTaskData) {
     try {
         const response = await fetch('http://localhost:3000/tasks', {
             method: 'POST',
-            headers: {'ContentType' : 'application/json'},
+            headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(postTaskData)
         })
 
@@ -39,7 +39,7 @@ async function PostTasks(postTaskData) {
     }
 }
 
-async function postUsers(postUsersData) {
+export async function postUsers(postUsersData) {
   try {
     const response = await fetch('http://localhost:3000/users', {
       method: 'POST',
@@ -59,11 +59,11 @@ async function postUsers(postUsersData) {
 }
 
 // PUT ///////////////////////////////////////////////////////////
-async function putTaks(id, putTaskData) {
+export async function putTaks(id, putTaskData) {
     try {
         const response = await fetch(`http://localhost:3000/tasks/${id}`, {
             method: 'PUT',
-            headers: {'ContentType' : 'application/json'},
+            headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(putTaskData)
         })
 
@@ -77,11 +77,11 @@ async function putTaks(id, putTaskData) {
     }
 }
 
-async function putUsers(id, putUsersData){
+export async function putUsers(id, putUsersData){
     try {
         const response = await fetch(`http://localhost:3000/users/${id}`, {
             method: 'PUT',
-            headers: {'ContentType' : 'application/json'},
+            headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify(putUsersData)
         })
 
@@ -97,7 +97,7 @@ async function putUsers(id, putUsersData){
 }
 
 // Delete ////////////////////////////////////
-async function deleteTaks(id) {
+export async function deleteTaks(id) {
     try {
         const response = await fetch(`http://localhost:3000/tasks/${id}`, {
             method: 'DELETE'
@@ -112,7 +112,7 @@ async function deleteTaks(id) {
     }
 }
 
-async function deleteUsers(id) {
+export async function deleteUsers(id) {
     try {
         const response = await fetch(`http://localhost:3000/users/${id}`, {
             method: 'DELETE'
