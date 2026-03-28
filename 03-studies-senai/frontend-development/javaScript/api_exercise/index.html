@@ -1,59 +1,49 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercício API</title>
-    <script type="module" src="./scripts/main.js" defer=""></script>
-    <link rel="stylesheet" href="./style/style.css">
-  </head>
-  <body>
-    <main>
-      <h1>Cadastre Usuários no site Abaixo</h1> 
-    <label for="inputListaUser">Usuário</label> 
-    <input type="text" id="inputListaUser"/>  
 
-    <label for="inputListaEmail">E-mail</label> 
-    <input type="text" id="inputListaEmail"/>  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercício API</title>
+  <script type="module" src="./scripts/main.js" defer=""></script>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
 
-    <button id="btnAdicionarUser">Adicionar</button> 
+<body>
+  <main>
+    <h1>Cadastre Usuários no site Abaixo</h1>
+    <label for="inputListaUser">Usuário</label>
+    <input type="text" id="inputListaUser" />
+
+    <label for="inputListaEmail">E-mail</label>
+    <input type="text" id="inputListaEmail" />
+
+    <button id="btnAdicionarUser">Adicionar</button>
 
     <h2>Usuários Cadastrados</h2>
-     <ul id="listaUsersUl"></ul> 
-
-     <h2>Alterar Usuário</h2>
-
-     <label for="inputListaUserAlterar">Usuário</label> 
-    <input type="text" id="inputListaUserAlterar"/>  
-
-    <label for="inputListaEmailAlterar">E-mail</label> 
-    <input type="text" id="inputListaEmailAlterar"/>  
-
-    <button id="btnAdicionarUserAlterar">Alterar</button> 
+    <ul id="listaUsersUl"></ul>
 
     <button id="btnApagarUsersAlterar">Apagar Toda Lista de Usuários</button>
 
     <!-- --------------------------------------------------------- -->
 
-    <h2>Cadastre tarefas abaixo</h2> 
+    <h2>Cadastre tarefas abaixo</h2>
 
-    <label for="inputListaTarefa">Nome da Tarefa</label> 
-    <input type="text" id="inputListaTarefa"/>  
+    <label for="inputListaTarefa">Nome da Tarefa</label>
+    <input type="text" id="inputListaTarefa" />
 
-    <button id="btnAdcionarTarefa">Adicionar</button> 
+    <button id="btnAdicionarTarefa" type="button">Adicionar</button>
 
     <h2>Tarefas Criadas</h2>
-     <ul id="listaTarefasUl"></ul> 
+    <ul id="listaTarefasUl"></ul>
 
-      <h2>Alterar Tarefas</h2> 
-
-    <label for="inputListaTarefaAlterar">Nome da Tarefa</label> 
-    <input type="text" id="inputListaTarefaAlterar"/>  
-
-    <button id="btnAdcionarTarefaAlterar">Adicionar</button>
     <button id="btnApagarTarefaAlterar">Apagar Toda Lista de Tarefas</button>
-    </main>
-    
+  </main>
 
-  </body>
+  <div id="alerta" class="alerta">
+    <p id="mensagemAlerta"></p>
+    <button id="fecharAlerta">OK</button>
+  </div>
+</body>
+
 </html>
