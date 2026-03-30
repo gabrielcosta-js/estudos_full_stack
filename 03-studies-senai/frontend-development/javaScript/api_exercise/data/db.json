@@ -7,8 +7,13 @@
     },
     {
       "nomeTarefa": "Estudar API",
-      "status": false,
+      "status": true,
       "id": "1GP5ShZ07DU"
+    },
+    {
+      "nomeTarefa": "Estudar JS",
+      "status": false,
+      "id": "C-9Cjku"
     }
   ],
   "users": [
@@ -18,9 +23,9 @@
       "id": "5GLSPePsY3I"
     },
     {
-      "nomeUser": "RyanBoiola",
-      "email": "ryanBoiola@gmail.com",
-      "id": "LqI7N39geOA"
+      "nomeUser": "Alisson Rios",
+      "email": "Alisson@gmail.com",
+      "id": "lvPwj-2"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

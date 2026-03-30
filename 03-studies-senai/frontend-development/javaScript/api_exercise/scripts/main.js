@@ -5,3 +5,5 @@ script.carregarTarefas();
 script.adicionarTarefa();
 script.carregarUsers();
 script.adicionarUser();
+script.ApagarTodosUsers();
+script.ApagarTodasTarefas();
