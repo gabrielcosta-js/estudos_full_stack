@@ -1,0 +1,13 @@
+{
+  "name": "prova1",
+  "description": "Prova",
+  "author": "Gabriel Costa",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx json-server --watch db.json --port 3000"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
