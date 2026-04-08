@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins/Poppins-Light.ttf') format('truetype');
+}
+
+:root {
+    --branco: #FFFFFF ;
+    --babyBlue: #DBE4EF;
+    --cinzaClaro: #EDF0F4;
+    --cinzaMedio: #8F8F8F;
+    --cinza: #444444;
+    --azulDark: #041832;
+    --azulMedio: #144480;
+    --azulNeon: #2BDEFD;
+
+    --pHeaderAndFooter: 'Poppins' sans-serif;
+}
+
+header {
+    background-color: var(--azulDark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logoContainer {
+    width: 558px;
+    height: auto;
+    padding: 360px 112px 240px 112px;
+}
+#logoContainer p {
+    color: var(--babyBlue);
+    font-size: 52px;
+    font-family: var(--pHeaderAndFooter);
+    font-weight: lighter;
+    margin-top: 72px;
+}
+#logoContainer p strong{
+    font-size: 52px;  
+    color: var(--branco);
+}
+/* #imgContainer img{
+    width: 697px;
+    height: 480px;
+} */
+
+/* Main */
+main {
+    background-image: url('../img/Background.png');
+    height: 3249px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#adicionarContainer {
+    width: auto;
+    margin: 192px 0px 64px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.titulo {
+    color: var(--azulDark);
+    font-size: 44px;
+    margin: 0 0 32px 0;
+}
+#buttonadicionarPensamaneto {
+    padding: 8px 32px;
+    border-radius: 40px;
+    color: var(--branco);
+    background-color: var(--azulDark);
+    cursor: pointer;
+}
+hr {
+    width: 180px;
+    background-color: var(--azulDark);
+    margin-bottom: 96px;
+}
+#divVazia {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#divVazia p {
+    color: var(--azulDark);
+    margin-bottom: 32px;
+}
+/* Footer */
+footer {
+    background-color: var(--azulDark);
+    padding: 32px;
+}
+footer p{
+    text-align: center;
+    font-family: var(--pHeaderAndFooter);
+    color: var(--babyBlue);
+}
+
+.oculto {
+    display: none;
+}
+
