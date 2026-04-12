@@ -1,0 +1,15 @@
+{
+  "pensamentos": [
+    {
+      "nomePensamento": "Lorem ipsum dolor sit amet consectetur adipisicing elit. A reprehenderit totam eaque repellendus et nulla perferendis ducimus facere! Eum exercitationem laudantium consequuntur voluptatem pariatur aut suscipit maiores, in quia eveniet.",
+      "autor": "Algum maluco por ai",
+      "id": "3DSoFURbt3E"
+    },
+    {
+      "nomePensamento": "Eu queria Voar",
+      "autor": "Algum Noiado ",
+      "id": "pxDTL3gvQ90"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
