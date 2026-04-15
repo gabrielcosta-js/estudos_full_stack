@@ -42,3 +42,20 @@ footer{
     text-align: center;
     font-size: 15px;
 }
+
+
+img {
+    width: 150px;
+    transition: 0.3s;
+}
+
+button {
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
