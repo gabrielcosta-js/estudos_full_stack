@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+:root{
+    --azulTifanny:#8EE8FA;
+    --azulFraco:#bff4ff;
+}
+
+.titulo{
+    background-color:var(--azulTifanny) ;
+    font-family: "Jacques Francois";
+    padding: 90px;
+    text-align: center;
+    box-shadow: 10px 10px  20px rgba(31, 194, 226, 0.7);
+}
+.titulo h1{
+    font-size: 85px;
+}
+
+main{
+    background-color:var(--azulFraco);
+    padding: 110px;
+    gap: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    gap: 20px;
+}
+footer{
+    padding: 35px;
+    background-color: var(--azulTifanny);
+    text-align: center;
+    font-size: 15px;
+}
