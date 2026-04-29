@@ -15,7 +15,7 @@ export async function postPensamentos(PensamentosDataPost) {
             body: JSON.stringify(PensamentosDataPost)
          });
 
-         if (response.ok) {
+         if (!response.ok) {
             console.error(response)
             return;
          }
@@ -33,7 +33,7 @@ export async function putPensamentos(id, PensamentosDataPut) {
             body: JSON.stringify(PensamentosDataPut)
          });
 
-         if (response.ok) {
+         if (!response.ok) {
             console.error(response)
             return;
          }
