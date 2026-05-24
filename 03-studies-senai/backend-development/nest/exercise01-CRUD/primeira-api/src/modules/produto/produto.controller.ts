@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { ProdutoService } from './produto.service';
 import {Produto} from './interfaces/produto.interface';
 
@@ -23,6 +23,10 @@ export class ProdutoController {
 
     @Put('/:id')
     atualizarProduto(@Param('id') id:number, @Body() data: Produto) {
-        this.produtoService.atualizarProduto(id, data);
+        return this.produtoService.atualizarProduto(id, data);
+    }
+    @Delete('/:id')
+    deletarProduto(@Param('id') id:number) {
+        return this.produtoService.deletarProduto(id);
     }
 }
