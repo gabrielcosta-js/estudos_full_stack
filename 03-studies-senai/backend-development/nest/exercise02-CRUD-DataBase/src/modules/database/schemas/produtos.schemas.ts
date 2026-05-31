@@ -3,13 +3,13 @@ import { HydratedDocument } from "mongoose";
 
 export type ProdutoDocument = HydratedDocument<Produto>;
 
-@Schema
+@Schema()
 export class Produto {
     @Prop({required: true})
-    nome: string;
+    nome!: string;
 
     @Prop({requeried: true})
-    preco: number;
+    preco!: number;
 
     @Prop({required: false})
     descriacao?: string;
