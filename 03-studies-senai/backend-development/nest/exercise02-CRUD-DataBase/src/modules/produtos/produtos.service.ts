@@ -11,8 +11,8 @@ export class ProdutosService {
             return this.produtoRepository.encontrarTodosOsProdutos();
         }
     
-        public encontrarUmProduto(id: string) {
-            const produto = this.produtoRepository.encontrarUmProduto(id);
+        public async encontrarUmProduto(id: string) {
+            const produto = await this.produtoRepository.encontrarUmProduto(id);
 
             if(!produto) {
                 throw new NotFoundException("Nenhum produto encontrado")
@@ -27,16 +27,16 @@ export class ProdutosService {
             return 'Produto Criado Com Sucesso';
         } 
     
-        public atualizarProduto(id: string, data: AtualizarProdutoDTO) {
-            this.encontrarUmProduto(id);
-            this.produtoRepository.atualizarProduto(id, data);
+        public async atualizarProduto(id: string, data: AtualizarProdutoDTO) {
+            await this.encontrarUmProduto(id);
+            await this.produtoRepository.atualizarProduto(id, data);
 
             return 'PRoduto Atualizado com sucesso';
         }
     
-        public deletarProduto(id: string): string {
-            this.encontrarUmProduto(id);
-            this.produtoRepository.deletarProduto(id);
+        public async deletarProduto(id: string): Promise<string> {
+            await this.encontrarUmProduto(id);
+            await this.produtoRepository.deletarProduto(id);
 
             return 'Produto Deletado com Sucesso'
         }

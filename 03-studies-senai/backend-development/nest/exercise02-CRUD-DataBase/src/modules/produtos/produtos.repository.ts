@@ -12,8 +12,8 @@ export class ProdutoRepository {
                 return produto;
             }
         
-            public encontrarUmProduto(id: string) {
-                return this.produtoModel.findById(id);
+            public async encontrarUmProduto(id: string) {
+                return await this.produtoModel.findById(id);
             }
         
             public criarProduto(data: Produto){
@@ -22,12 +22,12 @@ export class ProdutoRepository {
                 produto.save()
             } 
         
-            public atualizarProduto(id: string, data: Partial<Produto>) {
-                this.produtoModel.findByIdAndUpdate(id, data, {upsert:true});
+            public async atualizarProduto(id: string, data: Partial<Produto>) {
+                await this.produtoModel.findByIdAndUpdate(id, data, {upsert:true});
             }
         
-            public deletarProduto(id: string){
-             this.produtoModel.findByIdAndDelete(new Types.ObjectId(id));  
+            public async deletarProduto(id: string){
+             await this.produtoModel.findByIdAndDelete(new Types.ObjectId(id));  
             }
   
 }
