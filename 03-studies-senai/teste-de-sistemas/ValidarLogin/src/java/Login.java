@@ -1,5 +1,5 @@
-public class login{
-    public static void loginSistem(){
+public class Login {
+    public static void loginSystem(){
         String nome = "Maria";
         String senha = "Maria123@";
     }
